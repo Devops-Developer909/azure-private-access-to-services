@@ -14,6 +14,7 @@ public class AzureStorageConfig {
 
     @Bean
     public BlobServiceClient blobServiceClient() {
+        System.out.println("Azure Storage Connection String: " + connectionString);
         return new BlobServiceClientBuilder()
                 .connectionString(connectionString)
                 .buildClient();

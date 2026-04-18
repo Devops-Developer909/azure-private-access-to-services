@@ -18,6 +18,7 @@ public class AzureBlobService {
     }
 
     public void uploadFile(String fileName, InputStream data, long size) {
+        System.out.println("Uploading file: " + fileName + " to container: " + containerName);
         BlobContainerClient containerClient =
                 blobServiceClient.getBlobContainerClient(containerName);
 
